@@ -114,8 +114,10 @@ data()
 data(mtcars)
 
 
+# knowing how many hotel roomw where cancell it
+hotel_bookings
 
+skim_without_charts(hotel_bookings)
 
-
-
+hotel_bookings %>%  group_by(reservation_status) %>% summarise(number_canceled  = n( ))
 
