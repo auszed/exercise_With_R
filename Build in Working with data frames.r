@@ -121,3 +121,12 @@ skim_without_charts(hotel_bookings)
 
 hotel_bookings %>%  group_by(reservation_status) %>% summarise(number_canceled  = n( ))
 
+?summarise
+library(skimr)
+
+#calculate the average of all the rows
+skim_without_charts(hotel_bookings)
+hotel_bookings$lead_time                              
+
+
+

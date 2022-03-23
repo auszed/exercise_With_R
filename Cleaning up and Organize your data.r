@@ -83,15 +83,13 @@ penguins %>%
   filter(species == "Adelie")
 
 
+# Wide to long with tidyr
+longExample <- spread(mtcars, cyl,gear)
+view(longExample)
 
 
-
-
-
-
-
-
-
+wideExample <- gather(longExample, mpg,ss , 10:12)
+head(wideExample)
 
 
 
