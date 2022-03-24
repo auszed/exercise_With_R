@@ -149,4 +149,16 @@ onlineta_city_hotels_v2 <- hotel_bookings %>%
 View(onlineta_city_hotels_v2)
 
 
+# Title and subtitle
+?labs
 
+ggplot(data = penguins) + geom_point(mapping = aes(x = flipper_length_mm, y = body_mass_g, color = species)) +
+ labs( title = "palmerpenguins", subtitle = "data showing the lengh based on mass",
+        caption  = "data collected by Dr. Kristen" ) +
+ facet_grid(sex~species)
+   
+
+anotate text inside the cacheGenericsMetaData()
+ggplot(data = penguins, mapping = aes(x = flipper_length_mm, y = body_mass_g
+                                      ,shape = species, color = species, size = species, alpha = body_mass_g
+)) +  geom_point() + annotate("text", x =210, y = 3000, label= "adding text in the chart")
